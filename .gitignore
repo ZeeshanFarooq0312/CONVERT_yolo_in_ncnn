@@ -44,15 +44,6 @@ env/
 *~
 .DS_Store
 
-# NCNN build artifacts
-ultralytics/ncnn/build/
-ultralytics/.git/
-ultralytics/
-
-# Ultralytics cache
-.ultralytics/
-runs/
-datasets/
 
 # OS
 .DS_Store
