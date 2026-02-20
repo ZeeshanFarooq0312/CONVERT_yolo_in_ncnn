@@ -1,0 +1,64 @@
+# Generated model files (large files - exclude these)
+*.pt
+*.onnx
+*.param
+*.bin
+best_opt.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# NCNN build artifacts
+ultralytics/ncnn/build/
+ultralytics/.git/
+ultralytics/
+
+# Ultralytics cache
+.ultralytics/
+runs/
+datasets/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log

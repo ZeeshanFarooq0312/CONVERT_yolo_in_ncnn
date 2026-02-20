@@ -1,0 +1,14 @@
+# YOLOv8 and ONNX conversion requirements
+ultralytics>=8.0.0
+onnx>=1.13.0
+onnxruntime>=1.16.0
+onnxslim>=0.1.0
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Utilities
+opencv-python>=4.8.0
+numpy>=1.21.0
+protobuf>=3.20.0

@@ -1,0 +1,41 @@
+name: YOLOv8 NCNN Conversion Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-conversion:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Check script syntax
+      run: |
+        python -m py_compile convert_complete_pipeline.py
+        python -m py_compile convert_onnx_to_ncnn.py
+        python -m py_compile convert_with_pnnx.py
+    
+    - name: Verify README
+      run: |
+        if [ ! -f "README.md" ]; then echo "README.md missing!"; exit 1; fi
+        echo "✅ README.md found"
+    
+    - name: Check project structure
+      run: |
+        echo "📁 Checking project structure..."
+        ls -lh *.py
+        echo "✅ All Python scripts found"
